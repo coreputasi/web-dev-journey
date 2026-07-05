@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+    <form action="" id="survey-form">
+        <label for="name" id="name-label">Name: </label>
+        <input type="text" id="name" required name="name" placeholder="Jhon Doe">
+        <label for="email" id="email-label">Email: </label>
+        <input type="email" id="email" required name="email" placeholder="email@email.com">
+        <label for="number">Number: </label>
+        <input type="number" id="number" min="18" max="45" name="number" placeholder="5320328983">
+
+        <fieldset>
+            <select name="" id="dropdown">
+                <option value="p1">pilihan 1</option>
+                <option value="p2">pilihan 2</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Pilih Salah Satu</legend>
+            <input type="radio" value="yes" id="yes-option">
+            <label for="yes-option">Yes</label>
+            <input type="radio" value="no" id="no-option">
+            <label for="no-option">No</label>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
