@@ -21,8 +21,8 @@ Belajar coding itu jauh lebih seru (dan konsisten) kalau ada bukti nyata dari pr
 
 - [x] **HTML Dasar** — struktur, semantic tags, forms, table
 - [x] **Media Element** — audio, video, iframe, SVG
-- [ ] **CSS** — styling, layout, flexbox, grid
-- [ ] **CSS Responsive & Animation**
+- [x] **CSS** — styling, layout, flexbox, grid
+- [x] **CSS Responsive & Animation**
 - [ ] **JavaScript Dasar**
 - [ ] **JavaScript DOM & Interaktivitas**
 - [ ] **Framework/Library (TBD)**
