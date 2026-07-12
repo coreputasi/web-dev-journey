@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: aquamarine;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: blue;
+}
+
+a:focus {
+  outline: auto;
+}
+a:visited {
+  color: pink;
+}
