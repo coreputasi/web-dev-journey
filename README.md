@@ -66,3 +66,92 @@ Setiap commit di repo ini adalah bagian dari proses belajar — termasuk yang ty
 <p align="center">
   <i>Dibangun satu tag, satu commit, satu error pada satu waktu.</i>
 </p>
+
+
+# Git Workflow — Cheat Sheet Harian
+
+Cheat sheet ini buat proyek `web-dev-journey`, khususnya kerja di branch `feature-css`.
+
+---
+
+## 🌅 Sebelum Mulai Kerja
+
+```bash
+git branch                      # cek kamu ada di branch yang benar
+git status                      # cek ada perubahan belum ke-commit atau nggak
+git pull origin feature-css     # tarik update terbaru dari GitHub
+```
+
+Kalau ketiga command lancar tanpa error → **langsung lanjut ngoding**.
+
+---
+
+## 🌙 Setelah Selesai Kerja
+
+```bash
+git add .
+git commit -m "pesan yang jelas soal apa yang kamu kerjain"
+git push origin feature-css
+```
+
+Cek sekali lagi:
+```bash
+git status
+```
+Kalau muncul `nothing to commit, working tree clean` → aman, semua sudah ke GitHub.
+
+---
+
+## 🛠️ Kalau Push Ditolak (non-fast-forward)
+
+Artinya ada perubahan di GitHub yang belum ada di laptop kamu.
+
+```bash
+git pull origin feature-css
+```
+
+- Kalau muncul editor Vim minta commit message → tekan `Esc`, ketik `:wq`, Enter (simpan pesan default).
+- Kalau ada conflict → buka file yang bentrok, cari tanda `<<<<<<<`, `=======`, `>>>>>>>`, edit manual, lalu:
+  ```bash
+  git add <nama_file>
+  git commit
+  ```
+
+Setelah beres:
+```bash
+git push origin feature-css
+```
+
+---
+
+## 📋 Format Commit Message yang Bagus
+
+| Prefix | Kapan dipakai |
+|---|---|
+| `feat:` | Menambah fitur baru |
+| `fix:` | Memperbaiki bug |
+| `style:` | Perubahan tampilan/CSS, bukan logic |
+| `refactor:` | Merapikan kode tanpa mengubah fungsi |
+| `docs:` | Update dokumentasi/README |
+
+Contoh: `feat: add greeting card html structure`
+
+---
+
+## 🔍 Command Cek Cepat
+
+```bash
+git log --oneline -5              # lihat 5 commit terakhir
+git log --oneline --graph --all   # lihat history + branch secara visual
+git branch                        # lihat branch aktif
+git status                        # lihat perubahan yang belum ke-commit
+```
+
+---
+
+## 🧠 Aturan Emas
+
+1. **Selalu `pull` sebelum mulai kerja.**
+2. **Selalu `add → commit → push` sebelum menutup laptop.**
+3. **Commit kecil & sering**, jangan numpuk banyak perubahan sekaligus.
+4. **Jangan panik kalau push ditolak** — itu normal, tinggal `pull` lalu `push` lagi.
