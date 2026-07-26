@@ -1,0 +1,32 @@
+.form-container {
+  background-color: azure;
+  border-radius: 12px;
+  padding: 5px;
+  width: 600px;
+}
+
+label {
+  margin: 12px auto;
+  color: red;
+}
+
+input {
+  width: 200px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+
+textarea {
+  width: 500px;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+button {
+  background: #eaeaea;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: blue;
+}
